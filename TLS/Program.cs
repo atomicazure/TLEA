@@ -1,8 +1,5 @@
-﻿using TensorLatticeEncryption;
-using System;
-
-Console.WriteLine("Enter the tensor dimensions (e.g., '30'):");
-int dimension = int.Parse(Console.ReadLine());
+﻿
+using TensorLatticeEncryption;
 
 Console.WriteLine("Enter the noise level (standard deviation):");
 double noiseLevel = double.Parse(Console.ReadLine());
@@ -11,7 +8,8 @@ Console.WriteLine("Enter the plain text to encrypt:");
 string plainText = Console.ReadLine();
 
 // Generate original tensor from plain text
-float[] inputTensor = TensorHelper.TextToTensor(plainText, dimension);
+float[] inputTensor = TensorHelper.TextToTensor(plainText);
+int dimension = inputTensor.Length;  // Set dimension based on text length
 
 Console.WriteLine("Original Tensor:");
 TensorHelper.PrintTensor(inputTensor);
