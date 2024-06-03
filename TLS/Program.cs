@@ -1,5 +1,4 @@
 ﻿using TensorLatticeEncryption;
-using System;
 
 // Top-level statements
 Console.WriteLine("Enter the tensor dimensions (e.g., '30'):");
