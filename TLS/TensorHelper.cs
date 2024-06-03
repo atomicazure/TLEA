@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using System;
+using System.Linq;
+using System.Text;
 
 namespace TensorLatticeEncryption
 {
@@ -31,10 +33,7 @@ namespace TensorLatticeEncryption
         {
             float[] tensor = new float[length];
             byte[] bytes = Encoding.ASCII.GetBytes(text);
-            for (int i = 0; i < length; i++)
-            {
-                tensor[i] = i < bytes.Length ? (float)bytes[i] : 0f;
-            }
+            Array.Copy(bytes, tensor, Math.Min(bytes.Length, length));
             return tensor;
         }
 
