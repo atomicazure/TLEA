@@ -1,5 +1,4 @@
-﻿
-using TensorLatticeEncryption;
+﻿using TensorLatticeEncryption;
 
 Console.WriteLine("Enter the noise level (standard deviation):");
 double noiseLevel = double.Parse(Console.ReadLine());
